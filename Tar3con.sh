@@ -27,7 +27,7 @@ recon()
 {
 	echo "${yellow}Recon started on $domain "
 	echo "${yellow}Finding subdomains using sublister..."
-	python3 ~/tools/Sublist3r/sublist3r.py -d $domain -t 10 -v -o ./$domain/$foldername/$domain.txt
+	python ~/tools/Sublist3r/sublist3r.py -d $domain -t 10 -v -o ./$domain/$foldername/$domain.txt
 	echo "${yellow}Finding subdomains using subfinder..."
 	subfinder -d $domain >> ./$domain/$foldername/$domain.txt
 	echo "${yellow}Finding subdomains using amass..."
